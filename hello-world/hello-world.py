@@ -1,6 +1,8 @@
 import click
 
-@click.command()
-def hello_world():
-    """A simple plugin that prints 'Hello, World!'"""
-    click.echo("Hello, World!")
+def register(cli):
+    @cli.command()
+    def hello_world():
+        """Say hello."""
+        click.echo("Hello World!")
+#    click.echo("Hello, World!")
